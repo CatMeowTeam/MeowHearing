@@ -1,0 +1,91 @@
+{
+  "name": "meow-hearing",
+  "productName": "Meow Hearing",
+  "version": "0.6.7",
+  "description": "Nghe nhạc YouTube trên Windows theo kiểu Spotify — phát triển bởi CatMeow Team",
+  "author": "CatMeow Team",
+  "license": "MIT",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev:web": "vite",
+    "build:web": "vite build",
+    "start": "vite build && electron .",
+    "dist:win": "vite build && electron-builder --win nsis portable --x64"
+  },
+  "dependencies": {
+    "sql.js": "1.12.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@fontsource/be-vietnam-pro": "^5.1.0",
+    "@fontsource/caveat": "^5.1.0",
+    "@fontsource/jetbrains-mono": "^5.1.1",
+    "@fontsource/nunito": "^5.1.0",
+    "@vitejs/plugin-react": "4.3.4",
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "resedit": "1.7.2",
+    "vite": "5.4.11"
+  },
+  "build": {
+    "appId": "vn.catmeow.meowhearing",
+    "productName": "Meow Hearing",
+    "copyright": "© 2026 CatMeow Team",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "dist/**",
+      "package.json"
+    ],
+    "asar": true,
+    "asarUnpack": [],
+    "afterPack": "scripts/afterPack.js",
+    "win": {
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false,
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Meow Hearing",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "include": "build/installer.nsh",
+      "artifactName": "MeowHearing-Setup-${version}.exe",
+      "uninstallDisplayName": "Meow Hearing",
+      "deleteAppDataOnUninstall": false,
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/uninstallerSidebar.bmp",
+      "installerHeader": "build/installerHeader.bmp",
+      "runAfterFinish": true,
+      "installerLanguages": [
+        "vi_VN"
+      ],
+      "allowElevation": false
+    },
+    "portable": {
+      "artifactName": "MeowHearing-Portable-${version}.exe"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "CatMeowTeam",
+        "repo": "MeowHearing"
+      }
+    ]
+  },
+  "repository": "https://github.com/CatMeowTeam/MeowHearing"
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" width="512" height="512">
+<defs><linearGradient id="g" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="#ffb862"/><stop offset="1" stop-color="#ec672b"/></linearGradient>
+<g id="paw"><ellipse cx="17" cy="27" rx="5" ry="6.5" transform="rotate(-22 17 27)"/><ellipse cx="26.5" cy="17.5" rx="5" ry="6.8" transform="rotate(-8 26.5 17.5)"/><ellipse cx="37.5" cy="17.5" rx="5" ry="6.8" transform="rotate(8 37.5 17.5)"/><ellipse cx="47" cy="27" rx="5" ry="6.5" transform="rotate(22 47 27)"/><path d="M32 30c-7 0-13.8 7.4-15.4 13.8-1.4 5.7 2.7 9.2 7.4 9.2 3 0 5.2-1.6 8-1.6s5 1.6 8 1.6c4.7 0 8.8-3.5 7.4-9.2C45.8 37.4 39 30 32 30z"/></g></defs>
+<path d="M9 24L11 5.5Q11.6 3 13.6 4.4L25 13h14l11.4-8.6Q52.4 3 53 5.5L55 24v25q0 11-11 11H20Q9 60 9 49z" fill="url(#g)"/>
+<path d="M14.2 10.5l1 8.6 5.6-4.3z" fill="#ffd3dc" opacity=".9"/><path d="M49.8 10.5l-1 8.6-5.6-4.3z" fill="#ffd3dc" opacity=".9"/>
+<path d="M16 38v-4a16 16 0 0 1 32 0v4" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+<rect x="12.5" y="35" width="8" height="13" rx="3.5" fill="#fff"/><rect x="43.5" y="35" width="8" height="13" rx="3.5" fill="#fff"/>
+<g fill="#fff" transform="translate(32 43) scale(.36) translate(-32 -36)"><use xlink:href="#paw"/></g>
+</svg>
